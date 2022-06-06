@@ -66,10 +66,10 @@ WSGI_APPLICATION = 'instaclone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'instaclone',
+        'NAME': 'instagram',
         'USER':'moringa',
         'PASSWORD':'Access',
-        'PORT': '*',
+        'PORT': '',
     }
 }
 db_from_env = dj_database_url.config(conn_max_age=500)
