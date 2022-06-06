@@ -1,0 +1,7 @@
+@media only screen and (max-width: 475px){
+    .download{
+        width:45%;
+        display:flex;
+        flex-direction:row;
+        display:inline;
+    }}
