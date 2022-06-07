@@ -66,7 +66,7 @@ WSGI_APPLICATION = 'instaclone.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ig',
+        'NAME': 'instagramig',
         'USER':'moringa',
         'PASSWORD':'Access',
         'PORT':'',
