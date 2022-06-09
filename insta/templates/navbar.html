@@ -1,0 +1,42 @@
+{%load static%}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock %}
+<header class="main-header fixed-top">
+  <a href="{% url 'home' %}" class="brand-logo">
+      <h2 class="instagram-title" title="HomePage">InstaClone</h2>
+  </a>
+  <div>
+      <form action="/search/" method="POST">
+          {% csrf_token %}
+          <div class="input-group mb-3">
+              <div class="input-group">
+                  <input type="text" class="form-control search-text" required
+                      name="username" id="search-text" placeholder="Search by username">
+                  <button class="btn btn-light search" id="button-addon2" type="submit">
+                      <i class="fas fa-search"></i>
+                  </button>
+              </div>
+          </div>
+      </form>
+  </div>
+  <nav class="main-nav" color="black">
+      <ul style="display: flex; margin-top: 0%; padding-left: 2;">
+          <li class="nav-items"><a href="{% url 'home' %}" title="HomePage" >
+              <img src="" title="HomePage" alt="" srcset="">
+          </a></li>
+          <li class="nav-items"><a href="/upload" >
+              <img src="" title="Create Post">
+          </a></li>
+          <li class="nav-items"><a href="{% url 'profile' user.id %}">
+              <img src="" title="{{request.user}}">
+          </a></li>
+          <li class="nav-items"><a href="/logout">
+              <img src="" title="Logout">
+          </a></li>
+      </ul>
+  </nav>
+</header>
+<br>
+<br>

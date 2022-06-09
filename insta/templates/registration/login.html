@@ -1,0 +1,48 @@
+{%extends "registration/base.html"%}
+{% load bootstrap4 %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+      {% load static %}
+  
+    </div>
+    <div class="col-md-4">
+      {% if form.errors %}
+      <p> Password or Username is incorrect </p>
+      {% endif %}
+      <div class="panel panel-default">
+        <div class="panel-heading">
+        </div>
+        <div class="panel-body">
+          <form action="/accounts/login/" method="post">
+            <h1 style="font-family:'Grand Hotel', cursive;" class="text-center">InstaClone</h1>
+            {% csrf_token %}
+            {% bootstrap_form form%}
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-sm" value="Login">
+            </div>
+            <input type="hidden" name="next" value="{{next}}">
+          </form>
+          <div class="border-top pt-3 text-center">
+            <small class="text-muted">Don't Have an Account?
+              <a href="/accounts/register">Sign Up</a>
+            </small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- empty div -->
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+{% endblock %}
