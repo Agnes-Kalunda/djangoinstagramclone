@@ -3,8 +3,7 @@
   
 # Description  
 This is a clone of  Instagram where people share their  images and videos for other users to view. 
-Users can sign up, login, view and post photos, search and follow other users.
-##  Live Link  
+Users can sign up, login, view and post photos, search and follow other users
 
 
 
@@ -18,7 +17,7 @@ Users can sign up, login, view and post photos, search and follow other users.
   
   
 ## Setup and Installation  
-To get the project .......  
+To get the project clone https://github.com/Agnes-Kalunda/djangoinstagramclone.git 
   
 ##### Cloning the repository:  
  ```bash 
